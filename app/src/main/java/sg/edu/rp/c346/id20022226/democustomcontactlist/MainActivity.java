@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvContact;
     ArrayList<Contact> alContactList;
     CustomAdapter caContact;
-    ImageView imageViewGender;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         caContact = new CustomAdapter(this, R.layout.row, alContactList);
         lvContact.setAdapter(caContact);
 
-        imageViewGender = findViewById(R.id.imageViewGender);
+        imageView = findViewById(R.id.imageView);
         String imageUrl = "https://seeklogo.com/images/A/android-logo-E109D453E3-seeklogo.com.png";
-        Picasso.with(this).load(imageUrl).into(imageViewGender);
+        Picasso.with(this).load(imageUrl).into(imageView);
     }
 }
